@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Javascript</title>
+
+    <style>
+        .teste {
+            color: yellow;
+        }
+    </style>
+
+    <script>
+
+
+        function acao1() {
+            document.getElementById('campo').style.backgroundColor = 'yellow'
+        }
+
+        function acao2() {
+            
+            var caracter = document.getElementById('campo').value
+            if (caracter.length == 0) {
+                document.getElementById('campo').style.backgroundColor = ''
+            }
+        }
+
+        function acao3() {
+            
+            var caracter = document.getElementById('campo').value
+            if (caracter.length <= 3) {
+                document.getElementById('campo').style.backgroundColor = 'red'
+            } 
+            if (caracter.length > 3) {
+                document.getElementById('campo').style.backgroundColor = 'green'
+            }
+        }
+
+        
+
+
+    </script>
+</head>
+
+<body>
+
+
+    <input onfocus="acao1()" onblur="acao2()" onchange="acao3()" type="text" id="campo">
+
+</body>
+
+</html>
