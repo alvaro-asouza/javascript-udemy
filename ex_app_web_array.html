@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <script>
+
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function validarInput() {
+            var input = document.getElementById('texto').value
+            var campoAdicionar = document.getElementById('adicionar')
+
+            // if(input != '') {
+
+            // if(objetos.indexOf(input) !== -1){
+            //     alert('Objeto já foi adicionado')
+            // }else {
+            //     objetos.push(input)
+            //     console.log(objetos);
+
+            //     document.getElementById(input).value = ''
+            // } 
+
+            // }else {
+            //     alert('Informe um valor válido')
+
+            // }
+
+            // function ordenarObjetos(){
+            //     objetos.sort()
+            //     console.log(objetos);
+
+            // }
+
+            if (input === '' || input.length < 3) {
+                campoAdicionar = alert('Informe um valor válido')
+            } else if (objetos.indexOf(input) !== -1) {
+                campoAdicionar = alert('Objeto já foi adicionado')
+            } else {
+                input = objetos.push(input)
+                campoAdicionar = alert('Objeto inserido no array')
+                input = document.getElementById('texto').value = ''
+                console.log(objetos);
+
+            }
+
+        }
+
+        function acao() {
+            var CampoOrdenar = document.getElementById('ordenar')
+            if (campoOrdenar = 'click') {
+                objetos.sort()
+                alert('Ordenando elemento')
+                console.log(objetos);
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <input onchange="validarInput()" id="texto" type="text" placeholder="Digite aqui">
+    <button onclick="validarInput()" id="adicionar" type="button">Adicionar</button>
+    <button onclick="acao()" id="ordenar" type="button">Ordenar</button>
+
+
+</body>
+
+
+
+</html>
