@@ -27,6 +27,7 @@
             return area
         }
         */
+       /*
 
         function soma(a, b) {
             //b = b === undefined ? 0 : b
@@ -34,6 +35,19 @@
         }
 
         console.log(soma(7,7));
+        */
+       function soma() {
+        var resultado = 0
+
+        for(var i in arguments){
+            resultado += arguments[i];
+        }
+         
+        return resultado;
+       }
+
+       console.log(soma(7, 2, 3.2, 'texto', 8));
+       
         
 
 
