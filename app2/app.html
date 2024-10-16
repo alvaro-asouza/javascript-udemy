@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,17 +21,19 @@
         </div>
 
         <div class="cronometro">
-            Tempo restante: ?
+            Tempo restante: <span id="cronometro"></span>
         </div>
     </div>
 
     <script>
 
-        setInterval(function () {
-            posicaoRandomica() 
-        }, 2000)
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosquito = setInterval(function () {
+            posicaoRandomica()
+        }, criaMosquitoTempo)
     </script>
-    
+
 </body>
 
 </html>
